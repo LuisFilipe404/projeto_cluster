@@ -1,0 +1,24 @@
+/*Configurações de estilos globais*/
+
+* {
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px#f4f5fb00;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f4f5fb;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
