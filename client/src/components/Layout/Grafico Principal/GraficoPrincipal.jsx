@@ -7,6 +7,7 @@ import CriarGrafico from './CriarGrafico/CriarGrafico'; // importar componente d
 
 function GraficoPrincipal() {
 
+    
     const [dates, setdates] = useState([]) // State para pegar as datas (year, month day) dos csvs e utilizar como label do eixo x do gráfico
 
     // states para pegar os dados do eixo y de cada csv
@@ -17,7 +18,6 @@ function GraficoPrincipal() {
     const [notificationsCluster5, setnotificationsCluster5] = useState([])
     const [notificationsCluster6, setnotificationsCluster6] = useState([])
     const [notificationsCluster7, setnotificationsCluster7] = useState([])
-
 
     // effect para pegar por meio de promisses todos os csvs setados e retornar para o state as datas e as notificações, será executado assim que a página carregar
     useEffect(() => {
@@ -47,7 +47,6 @@ function GraficoPrincipal() {
                 // enviar para o state
                 setnotificationsCluster1(dataList)
                 setdates(labelsList)
-
         })
 
         dsv(';','/cluster2.csv')

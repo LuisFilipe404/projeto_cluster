@@ -1,0 +1,179 @@
+/*Container Principal*/
+.mapaSvgContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.mapaSvgContainer > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*Background*/
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /*/////////*/
+    padding: 10px 50px;
+    margin-top: 20px;
+}
+
+.mapaSvgContainer > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+/*Svg Tamanho*/
+
+.svg {
+    width: 40vw;
+    height: 60vh;
+}
+
+/*Título*/
+
+.mapTitle {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #252525;
+    padding-top: 20px;
+}
+
+/*SVG Configuração ao passar o mouse em cima*/
+
+.mapaSvg > path {cursor: pointer;}
+
+.cluster1 {fill: #f1c40f;}
+
+.cluster1:hover{fill: #f39c12;}
+
+.cluster2 {fill: #3498db;}
+
+.cluster2:hover{fill: #2980b9;}
+
+.cluster3 {fill: #95a5a6;}
+
+.cluster3:hover {fill: #7f8c8d;}
+
+.cluster4 {fill: #9b59b6;}
+
+.cluster4:hover {fill: #753a8f;}
+
+.cluster5 {fill: #2ecc71;}
+
+.cluster5:hover {fill: #27ae60;}
+
+.cluster6 {fill: #e67e22;}
+
+.cluster6:hover{fill: #d35400;}
+
+.cluster7 {fill: #e74c3c;}
+
+.cluster7:hover{fill: #c0392b;}
+
+.clusterNull{fill: #e1e0e0}
+
+/*Tool Tip Configurations*/
+
+.cityNameToolTip{
+    
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.classificationToolTip {
+    margin-bottom: -4px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+/*Legenda*/
+
+.mapSubtitle {align-self: flex-end;}
+
+.listSubtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.listSubtitle > li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.iconCluster1Subtitle,
+.iconCluster2Subtitle,
+.iconCluster3Subtitle,
+.iconCluster4Subtitle,
+.iconCluster5Subtitle,
+.iconCluster6Subtitle,
+.iconCluster7Subtitle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.iconCluster1Subtitle {background-color: #f1c40f;}
+.iconCluster2Subtitle {background-color: #3498db;}
+.iconCluster3Subtitle {background-color: #95a5a6;}
+.iconCluster4Subtitle {background-color: #9b59b6;}
+.iconCluster5Subtitle {background-color: #2ecc71;}
+.iconCluster6Subtitle {background-color: #e67e22;}
+.iconCluster7Subtitle {background-color: #e74c3c;}
+
+.descriptionSubtitle {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 500;
+    color: #232323;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Responsividade*/
+
+@media screen and (max-width: 768px) {
+    .mapSubtitle {
+        display: none;
+        visibility: hidden
+    }
+
+    .svg {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mapaSvgContainer > div {
+        width: 400px;
+    }
+    .svg {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mapaSvgContainer > div {
+        width: 300px;
+    }
+    .svg {
+        width: 200px;
+    }
+}

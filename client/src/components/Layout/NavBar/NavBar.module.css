@@ -1,0 +1,27 @@
+.navBar {
+    width: 100vw;
+    max-width: 1600px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 25px 10px;
+    border-radius: 30px;
+}
+
+.navBar > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBar > ul > li > a {
+    color: #838282;
+    font-family: 'Fire Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color .2s ease-in-out;
+}
+
+.navBar > ul > li > a:hover {
+    color: rgb(0, 149, 255);
+    transition: color .2s ease-in-out;
+}

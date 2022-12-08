@@ -12,19 +12,10 @@ import {
 import { Line } from 'react-chartjs-2';
 import zoomPlugin from 'chartjs-plugin-zoom';
 
-import styles from './CriarGrafico.module.css'; // Importar Css
+import styles from "./CriarGraficoUnico.module.css" // importar css
 
 
-function CriarGrafico({
-                        labels,
-                        dataListCluster1,
-                        dataListCluster2,
-                        dataListCluster3,
-                        dataListCluster4,
-                        dataListCluster5,
-                        dataListCluster6,
-                        dataListCluster7
-}) {    
+function CriarGraficoUnico({ labels, notifications, color, name}) {
 
     // instancia dos graficos
     ChartJS.register(
@@ -37,7 +28,6 @@ function CriarGrafico({
         Legend,
         zoomPlugin
     );
-
 
     // função de responsividade do gráfico
     const responsiveChart = () => {
@@ -55,76 +45,22 @@ function CriarGrafico({
     }
 
     const width = responsiveChart()
-    
+
     const limiteGrafico = 10000 // Utilize um limite para limitar a distancia do zoom out do gráfico
 
     // dados recebidos do props
     const datasList = [
         {
-            label: "Cluster 1",
-            data: dataListCluster1,
-            borderColor: "#f1c40f",
-            pointBorderWidth: 0,
-            hoverBackgroundColor: "none",
-            hoverBorderCapStyle: "none",
-            pointBackgroundColor: "transparent",
-        },
-        {
-            label: "Cluster 2",
-            data: dataListCluster2,
-            borderColor: "#3498db",
-            pointBorderWidth: 0,
-            hoverBackgroundColor: "none",
-            hoverBorderCapStyle: "none",
-            pointBackgroundColor: "transparent",
-        },
-        {
-            label: "Cluster 3",
-            data: dataListCluster3,
-            borderColor: "#95a5a6",
-            pointBorderWidth: 0,
-            hoverBackgroundColor: "none",
-            hoverBorderCapStyle: "none",
-            pointBackgroundColor: "transparent",
-        },
-        {
-            label: "Cluster 4",
-            data: dataListCluster4,
-            borderColor: "#9b59b6",
-            pointBorderWidth: 0,
-            hoverBackgroundColor: "none",
-            hoverBorderCapStyle: "none",
-            pointBackgroundColor: "transparent",
-        },
-        {
-            label: "Cluster 5",
-            data: dataListCluster5,
-            borderColor: "#2ecc71",
-            pointBorderWidth: 0,
-            hoverBackgroundColor: "none",
-            hoverBorderCapStyle: "none",
-            pointBackgroundColor: "transparent",
-        },
-        {
-            label: "Cluster 6",
-            data: dataListCluster6,
-            borderColor: "#e67e22",
-            pointBorderWidth: 0,
-            hoverBackgroundColor: "none",
-            hoverBorderCapStyle: "none",
-            pointBackgroundColor: "transparent",
-        },
-        {
-            label: "Cluster 7",
-            data: dataListCluster7,
-            borderColor: "#e74c3c",
+            label: name,
+            data: notifications,
+            borderColor: color,
             pointBorderWidth: 0,
             hoverBackgroundColor: "none",
             hoverBorderCapStyle: "none",
             pointBackgroundColor: "transparent",
         }
     ]
-    
+
     // opções de inicialização do gráfico
     const options = {
         animation: {
@@ -162,7 +98,7 @@ function CriarGrafico({
                     },
                     mode: 'xy',
                     scaleMode: 'x'
-              }
+            }
             }
         }
     }
@@ -173,7 +109,7 @@ function CriarGrafico({
         datasets: datasList
     }
 
-    return (
+    return (  
         <div className={styles.criarGraficoContainer}>
             <h1>Gráfico Clusters</h1>
             <div>
@@ -186,8 +122,8 @@ function CriarGrafico({
                     redraw={true}
                 />
             </div>
-        </div>  
+        </div> 
     );
 }
 
-export default CriarGrafico
+export default CriarGraficoUnico;
